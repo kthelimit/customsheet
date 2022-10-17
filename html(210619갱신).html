@@ -1,0 +1,888 @@
+<div class="sheet-wrap">
+	<div class="sheet-profileBox" style="position: relative;width:860px">
+		<div class="sheet-pointBox">
+			<div class="sheet-point sheet-thirst">
+				<span>갈증</span>
+				<input type="number" name="attr_thirst"/>
+			</div>
+			<div class="sheet-point sheet-resist">
+				<span>저항점</span>
+				<input type="number" name="attr_resist"/>
+			</div>
+			<div class="sheet-point sheet-moist">
+				<span>충만</span>
+				<input type="number" name="attr_moist"/>
+			</div>
+			<div class="sheet-point sheet-clap">
+				<span>갈채점</span>
+				<input type="number" name="attr_clap"/>
+			</div>
+		</div>
+		<div class="sheet-nameBox">
+			<div class="sheet-2ndname">
+				<span>칭호</span>
+				<input type="text" name="attr_2ndname"/>
+			</div>
+			<div class="sheet-name">
+				<span>캐릭터 이름</span>
+				<input type="text" name="attr_character_name"/>
+			</div>
+		</div>
+		<div class="sheet-family1">
+			<span>혈족</span>
+			<input type="text" name="attr_family"/>
+		</div>
+		<div class="sheet-family2">
+			<span>가문</span>
+			<input type="text" name="attr_family2"/>
+		</div>
+		<div class="sheet-job1">
+			<span>길</span>
+			<input type="text" name="attr_job"/>
+		</div>
+		<div class="sheet-job2">
+			<span>상징</span>
+			<input type="text" name="attr_job2"/>
+		</div>
+		<div class="sheet-eyecolor">
+			<span>눈색</span>
+			<input type="text" name="attr_eyecolor"/>
+		</div>
+		<div class="sheet-gender">
+			<span>성별</span>
+			<input type="text" name="attr_gender"/>
+		</div>
+		<div class="sheet-haircolor">
+			<span>머리색</span>
+			<input type="text" name="attr_haircolor"/>
+		</div>
+		<div class="sheet-feature1">
+			<span>특징1</span>
+			<input type="text" name="attr_feature1"/>
+		</div>
+		<div class="sheet-feature2">
+			<span>특징2</span>
+			<input type="text" name="attr_feature2"/>
+		</div>
+		<div class="sheet-corrupt">
+			<span>타락의 조짐</span>
+			<div>
+				<input type="text" name="attr_corrupt1" placeholder="-"/>
+			</div>
+			<div>
+				<input type="text" name="attr_corrupt2" placeholder="-"/>
+			</div>
+			<div>
+				<input type="text" name="attr_corrupt3" placeholder="-"/>
+			</div>
+			<div>
+				<input type="text" name="attr_corrupt4" placeholder="-"/>
+			</div>
+		</div>
+		<div class="sheet-background">
+			<span>배경</span>
+			<input type="text" name="attr_background"/>
+		</div>
+		<div class="sheet-decorate">
+			<span>서훈</span>
+			<input type="text" name="attr_decorate"/>
+		</div>
+		<div class="sheet-agedecorated">
+			<span>서훈 연령</span>
+			<input type="text" name="attr_agedecorated"/>
+		</div>
+		<div class="sheet-decoratedafter">
+			<span>서훈 후</span>
+			<input type="text" name="attr_decoratedafter"/>
+		</div>
+		<div class="sheet-ageofknight">
+			<span>기사력</span>
+			<input type="text" name="attr_ageofknight"/>
+		</div>
+	</div>
+	<div class="sheet-ActionBox">
+		<div class="sheet-Action-list">
+			<div class="sheet-title">
+				<span>행동</span>
+			</div>
+			<input type="hidden" name="attr_Action_viewbox" class="sheet-viewbox" value=""/>
+			<div class="sheet-view-count">
+				<input type="number" min="8" max="10" name="attr_action_count" value="12"/>개 보기
+			</div>
+			<div class="sheet-list">
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_01_target" value=""/>
+					<input name="attr_Action_01_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_01_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_01_Name}}}{{skilltype=@{Action_01_Types}}}{{skilltarget=@{Action_01_skillTarget}}}{{skillrange=@{Action_01_skillRange}}}{{cost=@{Action_01_Cost}}}{{flavor=@{Action_01_Flavor}}}{{dice01=@{Action_01_Dice01}}}{{dice02=@{Action_01_Dice02}}}{{dice03=@{Action_01_Dice03}}}{{dice04=@{Action_01_Dice04}}}{{dice05=@{Action_01_Dice05}}}{{dice06=@{Action_01_Dice06}}}{{effect=@{Action_01_Effect}}}{{dicetotal=@{Action_01_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_01_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_01_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_01_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>							
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_01_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+<div class="sheet-target">
+								<input type="text" name="attr_Action_01_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_01_Dice01" value=""/><input type="number" name="attr_Action_01_Dice02" value=""/><input type="number" name="attr_Action_01_Dice03" value=""/><input type="number" name="attr_Action_01_Dice04" value=""/><input type="number" name="attr_Action_01_Dice05" value=""/><input type="number" name="attr_Action_01_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_01_DiceTotal" value="(@{Action_01_Dice01} + @{Action_01_Dice02} + @{Action_01_Dice03} + @{Action_01_Dice04} + @{Action_01_Dice05} + @{Action_01_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_01_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_01_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_02_target" value=""/>
+					<input name="attr_Action_02_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_02_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_02_Name}}}{{skilltype=@{Action_02_Types}}}{{skilltarget=@{Action_02_skillTarget}}}{{skillrange=@{Action_02_skillRange}}}{{cost=@{Action_02_Cost}}}{{flavor=@{Action_02_Flavor}}}{{dice01=@{Action_02_Dice01}}}{{dice02=@{Action_02_Dice02}}}{{dice03=@{Action_02_Dice03}}}{{dice04=@{Action_02_Dice04}}}{{dice05=@{Action_02_Dice05}}}{{dice06=@{Action_02_Dice06}}}{{effect=@{Action_02_Effect}}}{{dicetotal=@{Action_02_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_02_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_02_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_02_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>							
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_02_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_02_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_02_Dice01" value=""/><input type="number" name="attr_Action_02_Dice02" value=""/><input type="number" name="attr_Action_02_Dice03" value=""/><input type="number" name="attr_Action_02_Dice04" value=""/><input type="number" name="attr_Action_02_Dice05" value=""/><input type="number" name="attr_Action_02_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_02_DiceTotal" value="(@{Action_02_Dice01} + @{Action_02_Dice02} + @{Action_02_Dice03} + @{Action_02_Dice04} + @{Action_02_Dice05} + @{Action_02_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_02_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_02_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_03_target" value=""/>
+					<input name="attr_Action_03_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_03_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_03_Name}}}{{skilltype=@{Action_03_Types}}}{{skilltarget=@{Action_03_skillTarget}}}{{skillrange=@{Action_03_skillRange}}}{{cost=@{Action_03_Cost}}}{{flavor=@{Action_03_Flavor}}}{{dice01=@{Action_03_Dice01}}}{{dice02=@{Action_03_Dice02}}}{{dice03=@{Action_03_Dice03}}}{{dice04=@{Action_03_Dice04}}}{{dice05=@{Action_03_Dice05}}}{{dice06=@{Action_03_Dice06}}}{{effect=@{Action_03_Effect}}}{{dicetotal=@{Action_03_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_03_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_03_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_03_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_03_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_03_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_03_Dice01" value=""/><input type="number" name="attr_Action_03_Dice02" value=""/><input type="number" name="attr_Action_03_Dice03" value=""/><input type="number" name="attr_Action_03_Dice04" value=""/><input type="number" name="attr_Action_03_Dice05" value=""/><input type="number" name="attr_Action_03_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_03_DiceTotal" value="(@{Action_03_Dice01} + @{Action_03_Dice02} + @{Action_03_Dice03} + @{Action_03_Dice04} + @{Action_03_Dice05} + @{Action_03_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_03_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_03_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_04_target" value=""/>
+					<input name="attr_Action_04_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_04_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_04_Name}}}{{skilltype=@{Action_04_Types}}}{{skilltarget=@{Action_04_skillTarget}}}{{skillrange=@{Action_04_skillRange}}}{{cost=@{Action_04_Cost}}}{{flavor=@{Action_04_Flavor}}}{{dice01=@{Action_04_Dice01}}}{{dice02=@{Action_04_Dice02}}}{{dice03=@{Action_04_Dice03}}}{{dice04=@{Action_04_Dice04}}}{{dice05=@{Action_04_Dice05}}}{{dice06=@{Action_04_Dice06}}}{{effect=@{Action_04_Effect}}}{{dicetotal=@{Action_04_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_04_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_04_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_04_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_04_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_04_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_04_Dice01" value=""/><input type="number" name="attr_Action_04_Dice02" value=""/><input type="number" name="attr_Action_04_Dice03" value=""/><input type="number" name="attr_Action_04_Dice04" value=""/><input type="number" name="attr_Action_04_Dice05" value=""/><input type="number" name="attr_Action_04_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_04_DiceTotal" value="(@{Action_04_Dice01} + @{Action_04_Dice02} + @{Action_04_Dice03} + @{Action_04_Dice04} + @{Action_04_Dice05} + @{Action_04_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_04_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_04_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_05_target" value=""/>
+					<input name="attr_Action_05_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_05_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_05_Name}}}{{skilltype=@{Action_05_Types}}}{{skilltarget=@{Action_05_skillTarget}}}{{skillrange=@{Action_05_skillRange}}}{{cost=@{Action_05_Cost}}}{{flavor=@{Action_05_Flavor}}}{{dice01=@{Action_05_Dice01}}}{{dice02=@{Action_05_Dice02}}}{{dice03=@{Action_05_Dice03}}}{{dice04=@{Action_05_Dice04}}}{{dice05=@{Action_05_Dice05}}}{{dice06=@{Action_05_Dice06}}}{{effect=@{Action_05_Effect}}}{{dicetotal=@{Action_05_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_05_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_05_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_05_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_05_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_05_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_05_Dice01" value=""/><input type="number" name="attr_Action_05_Dice02" value=""/><input type="number" name="attr_Action_05_Dice03" value=""/><input type="number" name="attr_Action_05_Dice04" value=""/><input type="number" name="attr_Action_05_Dice05" value=""/><input type="number" name="attr_Action_05_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_05_DiceTotal" value="(@{Action_05_Dice01} + @{Action_05_Dice02} + @{Action_05_Dice03} + @{Action_05_Dice04} + @{Action_05_Dice05} + @{Action_05_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_05_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_05_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_06_target" value=""/>
+					<input name="attr_Action_06_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_06_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_06_Name}}}{{skilltype=@{Action_06_Types}}}{{skilltarget=@{Action_06_skillTarget}}}{{skillrange=@{Action_06_skillRange}}}{{cost=@{Action_06_Cost}}}{{flavor=@{Action_06_Flavor}}}{{dice01=@{Action_06_Dice01}}}{{dice02=@{Action_06_Dice02}}}{{dice03=@{Action_06_Dice03}}}{{dice04=@{Action_06_Dice04}}}{{dice05=@{Action_06_Dice05}}}{{dice06=@{Action_06_Dice06}}}{{effect=@{Action_06_Effect}}}{{dicetotal=@{Action_06_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_06_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_06_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_06_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_06_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_06_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_06_Dice01" value=""/><input type="number" name="attr_Action_06_Dice02" value=""/><input type="number" name="attr_Action_06_Dice03" value=""/><input type="number" name="attr_Action_06_Dice04" value=""/><input type="number" name="attr_Action_06_Dice05" value=""/><input type="number" name="attr_Action_06_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_06_DiceTotal" value="(@{Action_06_Dice01} + @{Action_06_Dice02} + @{Action_06_Dice03} + @{Action_06_Dice04} + @{Action_06_Dice05} + @{Action_06_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_06_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_06_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_07_target" value=""/>
+					<input name="attr_Action_07_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_07_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_07_Name}}}{{skilltype=@{Action_07_Types}}}{{skilltarget=@{Action_07_skillTarget}}}{{skillrange=@{Action_07_skillRange}}}{{cost=@{Action_07_Cost}}}{{flavor=@{Action_07_Flavor}}}{{dice01=@{Action_07_Dice01}}}{{dice02=@{Action_07_Dice02}}}{{dice03=@{Action_07_Dice03}}}{{dice04=@{Action_07_Dice04}}}{{dice05=@{Action_07_Dice05}}}{{dice06=@{Action_07_Dice06}}}{{effect=@{Action_07_Effect}}}{{dicetotal=@{Action_07_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_07_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_07_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_07_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_07_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_07_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_07_Dice01" value=""/><input type="number" name="attr_Action_07_Dice02" value=""/><input type="number" name="attr_Action_07_Dice03" value=""/><input type="number" name="attr_Action_07_Dice04" value=""/><input type="number" name="attr_Action_07_Dice05" value=""/><input type="number" name="attr_Action_07_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_07_DiceTotal" value="(@{Action_07_Dice01} + @{Action_07_Dice02} + @{Action_07_Dice03} + @{Action_07_Dice04} + @{Action_07_Dice05} + @{Action_07_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_07_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_07_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_08_target" value=""/>
+					<input name="attr_Action_08_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_08_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_08_Name}}}{{skilltype=@{Action_08_Types}}}{{skilltarget=@{Action_08_skillTarget}}}{{skillrange=@{Action_08_skillRange}}}{{cost=@{Action_08_Cost}}}{{flavor=@{Action_08_Flavor}}}{{dice01=@{Action_08_Dice01}}}{{dice02=@{Action_08_Dice02}}}{{dice03=@{Action_08_Dice03}}}{{dice04=@{Action_08_Dice04}}}{{dice05=@{Action_08_Dice05}}}{{dice06=@{Action_08_Dice06}}}{{effect=@{Action_08_Effect}}}{{dicetotal=@{Action_08_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_08_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_08_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_08_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_08_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_08_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_08_Dice01" value=""/><input type="number" name="attr_Action_08_Dice02" value=""/><input type="number" name="attr_Action_08_Dice03" value=""/><input type="number" name="attr_Action_08_Dice04" value=""/><input type="number" name="attr_Action_08_Dice05" value=""/><input type="number" name="attr_Action_08_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_08_DiceTotal" value="(@{Action_08_Dice01} + @{Action_08_Dice02} + @{Action_08_Dice03} + @{Action_08_Dice04} + @{Action_08_Dice05} + @{Action_08_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_08_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_08_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_09_target" value=""/>
+					<input name="attr_Action_09_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_09_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_09_Name}}}{{skilltype=@{Action_09_Types}}}{{skilltarget=@{Action_09_skillTarget}}}{{skillrange=@{Action_09_skillRange}}}{{cost=@{Action_09_Cost}}}{{flavor=@{Action_09_Flavor}}}{{dice01=@{Action_09_Dice01}}}{{dice02=@{Action_09_Dice02}}}{{dice03=@{Action_09_Dice03}}}{{dice04=@{Action_09_Dice04}}}{{dice05=@{Action_09_Dice05}}}{{dice06=@{Action_09_Dice06}}}{{effect=@{Action_09_Effect}}}{{dicetotal=@{Action_09_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_09_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_09_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_09_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_09_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_09_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_09_Dice01" value=""/><input type="number" name="attr_Action_09_Dice02" value=""/><input type="number" name="attr_Action_09_Dice03" value=""/><input type="number" name="attr_Action_09_Dice04" value=""/><input type="number" name="attr_Action_09_Dice05" value=""/><input type="number" name="attr_Action_09_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_09_DiceTotal" value="(@{Action_09_Dice01} + @{Action_09_Dice02} + @{Action_09_Dice03} + @{Action_09_Dice04} + @{Action_09_Dice05} + @{Action_09_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_09_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_09_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_10_target" value=""/>
+					<input name="attr_Action_10_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_10_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_10_Name}}}{{skilltype=@{Action_10_Types}}}{{skilltarget=@{Action_10_skillTarget}}}{{skillrange=@{Action_10_skillRange}}}{{cost=@{Action_10_Cost}}}{{flavor=@{Action_10_Flavor}}}{{dice01=@{Action_10_Dice01}}}{{dice02=@{Action_10_Dice02}}}{{dice03=@{Action_10_Dice03}}}{{dice04=@{Action_10_Dice04}}}{{dice05=@{Action_10_Dice05}}}{{dice06=@{Action_10_Dice06}}}{{effect=@{Action_10_Effect}}}{{dicetotal=@{Action_10_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_10_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_10_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_10_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_10_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_10_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_10_Dice01" value=""/><input type="number" name="attr_Action_10_Dice02" value=""/><input type="number" name="attr_Action_10_Dice03" value=""/><input type="number" name="attr_Action_10_Dice04" value=""/><input type="number" name="attr_Action_10_Dice05" value=""/><input type="number" name="attr_Action_10_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_10_DiceTotal" value="(@{Action_10_Dice01} + @{Action_10_Dice02} + @{Action_10_Dice03} + @{Action_10_Dice04} + @{Action_10_Dice05} + @{Action_10_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_10_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_10_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_11_target" value=""/>
+					<input name="attr_Action_11_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_11_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_11_Name}}}{{skilltype=@{Action_11_Types}}}{{skilltarget=@{Action_11_skillTarget}}}{{skillrange=@{Action_11_skillRange}}}{{cost=@{Action_11_Cost}}}{{flavor=@{Action_11_Flavor}}}{{dice01=@{Action_11_Dice01}}}{{dice02=@{Action_11_Dice02}}}{{dice03=@{Action_11_Dice03}}}{{dice04=@{Action_11_Dice04}}}{{dice05=@{Action_11_Dice05}}}{{dice06=@{Action_11_Dice06}}}{{effect=@{Action_11_Effect}}}{{dicetotal=@{Action_11_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_11_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_11_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_11_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_11_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_11_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_11_Dice01" value=""/><input type="number" name="attr_Action_11_Dice02" value=""/><input type="number" name="attr_Action_11_Dice03" value=""/><input type="number" name="attr_Action_11_Dice04" value=""/><input type="number" name="attr_Action_11_Dice05" value=""/><input type="number" name="attr_Action_11_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_11_DiceTotal" value="(@{Action_11_Dice01} + @{Action_11_Dice02} + @{Action_11_Dice03} + @{Action_11_Dice04} + @{Action_11_Dice05} + @{Action_11_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_11_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_11_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_12_target" value=""/>
+					<input name="attr_Action_12_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_12_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_12_Name}}}{{skilltype=@{Action_12_Types}}}{{skilltarget=@{Action_12_skillTarget}}}{{skillrange=@{Action_12_skillRange}}}{{cost=@{Action_12_Cost}}}{{flavor=@{Action_12_Flavor}}}{{dice01=@{Action_12_Dice01}}}{{dice02=@{Action_12_Dice02}}}{{dice03=@{Action_12_Dice03}}}{{dice04=@{Action_12_Dice04}}}{{dice05=@{Action_12_Dice05}}}{{dice06=@{Action_12_Dice06}}}{{effect=@{Action_12_Effect}}}{{dicetotal=@{Action_12_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_12_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_12_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_12_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_12_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_12_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_12_Dice01" value=""/><input type="number" name="attr_Action_12_Dice02" value=""/><input type="number" name="attr_Action_12_Dice03" value=""/><input type="number" name="attr_Action_12_Dice04" value=""/><input type="number" name="attr_Action_12_Dice05" value=""/><input type="number" name="attr_Action_12_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_12_DiceTotal" value="(@{Action_12_Dice01} + @{Action_12_Dice02} + @{Action_12_Dice03} + @{Action_12_Dice04} + @{Action_12_Dice05} + @{Action_12_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_12_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_12_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_13_target" value=""/>
+					<input name="attr_Action_13_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_13_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_13_Name}}}{{skilltype=@{Action_13_Types}}}{{skilltarget=@{Action_13_skillTarget}}}{{skillrange=@{Action_13_skillRange}}}{{cost=@{Action_13_Cost}}}{{flavor=@{Action_13_Flavor}}}{{dice01=@{Action_13_Dice01}}}{{dice02=@{Action_13_Dice02}}}{{dice03=@{Action_13_Dice03}}}{{dice04=@{Action_13_Dice04}}}{{dice05=@{Action_13_Dice05}}}{{dice06=@{Action_13_Dice06}}}{{effect=@{Action_13_Effect}}}{{dicetotal=@{Action_13_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_13_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_13_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_13_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_13_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_13_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_13_Dice01" value=""/><input type="number" name="attr_Action_13_Dice02" value=""/><input type="number" name="attr_Action_13_Dice03" value=""/><input type="number" name="attr_Action_13_Dice04" value=""/><input type="number" name="attr_Action_13_Dice05" value=""/><input type="number" name="attr_Action_13_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_13_DiceTotal" value="(@{Action_13_Dice01} + @{Action_13_Dice02} + @{Action_13_Dice03} + @{Action_13_Dice04} + @{Action_13_Dice05} + @{Action_13_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_13_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_13_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Action_14_target" value=""/>
+					<input name="attr_Action_14_close" type="checkbox" value="1" class="sheet-Action_close"/>
+					<span class="sheet-Action_close-label"></span>
+					<input name="attr_Action_14_flag" type="checkbox" value="1" class="sheet-Action_flag"/>
+					<span class="sheet-Action_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Action_14_Name}}}{{skilltype=@{Action_14_Types}}}{{skilltarget=@{Action_14_skillTarget}}}{{skillrange=@{Action_14_skillRange}}}{{cost=@{Action_14_Cost}}}{{flavor=@{Action_14_Flavor}}}{{dice01=@{Action_14_Dice01}}}{{dice02=@{Action_14_Dice02}}}{{dice03=@{Action_14_Dice03}}}{{dice04=@{Action_14_Dice04}}}{{dice05=@{Action_14_Dice05}}}{{dice06=@{Action_14_Dice06}}}{{effect=@{Action_14_Effect}}}{{dicetotal=@{Action_14_DiceTotal}}}"></button>
+								<div class="sheet-type">
+									<select name="attr_Action_14_Types" title="행동타입">
+										<option value="">종류</option>
+										<option value="전투">전투</option>
+										<option value="통상">통상</option>
+									</select>
+								</div>
+							</div>
+							<div class="sheet-actionname">
+								<input type="text" name="attr_Action_14_Name" value="" placeholder="행동" title="행동명"/>
+							</div>
+							<div class="sheet-cost">
+								<input type="text" name="attr_Action_14_Cost" value="" placeholder="목표치" title="목표치"/>
+							</div>
+							<div class="sheet-range">
+								<input type="text" name="attr_Action_14_skillRange" value="" placeholder="거리" title="거리"/>
+							</div>
+							<div class="sheet-target">
+								<input type="text" name="attr_Action_14_skillTarget" value="" placeholder="대상" title="대상"/>
+							</div>
+							<div class="sheet-usingdice">
+								<input type="number" name="attr_Action_14_Dice01" value=""/><input type="number" name="attr_Action_14_Dice02" value=""/><input type="number" name="attr_Action_14_Dice03" value=""/><input type="number" name="attr_Action_14_Dice04" value=""/><input type="number" name="attr_Action_14_Dice05" value=""/><input type="number" name="attr_Action_14_Dice06" value=""/>
+							</div>
+							<div class="sheet-dicetotal">
+								<input type="number" name="attr_Action_14_DiceTotal" value="(@{Action_14_Dice01} + @{Action_14_Dice02} + @{Action_14_Dice03} + @{Action_14_Dice04} + @{Action_14_Dice05} + @{Action_14_Dice06})" disabled>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Action_14_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Action_14_Flavor" value="" placeholder="플레이버 작성"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sheet-Anecdote-list">
+			<div class="sheet-title">
+				<span>일화</span>
+			</div>
+			<input type="hidden" name="attr_Anecdote_viewbox" class="sheet-viewbox" value=""/>
+			<div class="sheet-view-count">
+				<input type="number" min="1" max="4" name="attr_anecdote_count" value="1"/>개 보기
+			</div>
+			<div class="sheet-list">
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Anecdote_01_target" value=""/>
+					<input name="attr_Anecdote_01_flag" type="checkbox" value="1" class="sheet-Anecdote_flag"/>
+					<span class="sheet-Anecdote_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Anecdote_01_Name}}}{{flavor=@{Anecdote_01_Flavor}}}{{effect=@{Anecdote_01_Effect}}}"></button>
+							</div>
+							<div class="sheet-anecdotename">
+								<input type="text" name="attr_Anecdote_01_Name" value="" placeholder="일화" title="일화명"/>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Anecdote_01_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Anecdote_01_Flavor" value="" placeholder="내용 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Anecdote_02_target" value=""/>
+					<input name="attr_Anecdote_02_flag" type="checkbox" value="1" class="sheet-Anecdote_flag"/>
+					<span class="sheet-Anecdote_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Anecdote_02_Name}}}{{flavor=@{Anecdote_02_Flavor}}}{{effect=@{Anecdote_02_Effect}}}"></button>
+							</div>
+							<div class="sheet-anecdotename">
+								<input type="text" name="attr_Anecdote_02_Name" value="" placeholder="일화" title="일화명"/>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Anecdote_02_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Anecdote_02_Flavor" value="" placeholder="내용 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Anecdote_03_target" value=""/>
+					<input name="attr_Anecdote_03_flag" type="checkbox" value="1" class="sheet-Anecdote_flag"/>
+					<span class="sheet-Anecdote_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Anecdote_03_Name}}}{{flavor=@{Anecdote_03_Flavor}}}{{effect=@{Anecdote_03_Effect}}}"></button>
+							</div>
+							<div class="sheet-anecdotename">
+								<input type="text" name="attr_Anecdote_03_Name" value="" placeholder="일화" title="일화명"/>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Anecdote_03_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Anecdote_03_Flavor" value="" placeholder="내용 작성"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="sheet-data-item">
+					<input type="hidden" name="attr_Anecdote_04_target" value=""/>
+					<input name="attr_Anecdote_04_flag" type="checkbox" value="1" class="sheet-Anecdote_flag"/>
+					<span class="sheet-Anecdote_flag-label"></span>
+					<div class="sheet-it">
+						<div class="sheet-defalut">
+							<div class="sheet-subj">
+								<button type="roll" class="sheet-btn-dice" value="&{template:DracuAction}{{name=@{character_name}}}{{skillname=@{Anecdote_04_Name}}}{{flavor=@{Anecdote_04_Flavor}}}{{effect=@{Anecdote_04_Effect}}}"></button>
+							</div>
+							<div class="sheet-anecdotename">
+								<input type="text" name="attr_Anecdote_04_Name" value="" placeholder="일화" title="일화명"/>
+							</div>
+						</div>
+						<div class="sheet-option">
+							<textarea name="attr_Anecdote_04_Effect" value="" placeholder="효과 작성"></textarea>
+							<textarea name="attr_Anecdote_04_Flavor" value="" placeholder="내용 작성"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/worker">
+// 목록 보기 체크
+on("change:action_count",
+	function() {
+		getAttrs(["action_count"],
+			function(values) {
+				setAttrs({action_viewbox:values.action_count});
+			}
+		);
+	}
+);
+on("sheet:opened",
+	function() {
+		getAttrs(["action_count"],
+			function(values) {
+				setAttrs({action_viewbox:values.action_count});
+			}
+		);
+	}
+);
+// 목록 보기 체크2
+on("change:anecdote_count",
+	function() {
+		getAttrs(["anecdote_count"],
+			function(values) {
+				setAttrs({anecdote_viewbox:values.anecdote_count});
+			}
+		);
+	}
+);
+on("sheet:opened",
+	function() {
+		getAttrs(["anecdote_count"],
+			function(values) {
+				setAttrs({anecdote_viewbox:values.anecdote_count});
+			}
+		);
+	}
+);
+</script>
+<rolltemplate class="sheet-rolltemplate-DracuAction">
+<div class="sheet-dracuActionWrap">
+	<div class="sheet-dracubox">
+		<div class="sheet-acc-tl">
+			<img src="https://i.imgur.com/tuWBskB.png"/>
+		</div>
+		<div class="sheet-acc-tr">
+			<img src="https://i.imgur.com/tjwDGlg.png"/>
+		</div>
+		<div class="sheet-acc-bl">
+			<img src="https://i.imgur.com/z3XzDz9.png"/>
+		</div>
+		<div class="sheet-acc-br">
+			<img src="https://i.imgur.com/mE5QuzH.png"/>
+		</div>
+		<div class="sheet-inner">
+			 {{#name}}
+			<div class="sheet-subtitle">
+				{{name}}
+			</div>
+			 {{/name}} {{#skillname}}
+			<div class="sheet-title">
+				{{skillname}}
+			</div>
+			 {{/skillname}} {{#dice01}}
+			<div class="sheet-usingdice" ">
+				 {{dice01}} {{#dice02}} {{dice02}} {{#dice03}} {{dice03}} {{#dice04}} {{dice04}} {{#dice05}} {{dice05}} {{#dice06}} {{dice06}} {{/dice06}} {{/dice05}} {{/dice04}} {{/dice03}} {{/dice02}}
+			</div>
+			 {{/dice01}}
+			<div class="sheet-con">
+				<p>
+					 {{#skilltype}}<span class="sheet-type">{{skilltype}}</span>{{/skilltype}} {{#cost}}<span class="sheet-cost">{{cost}}</span>{{/cost}} {{#skilltarget}}<span class="sheet-target">{{skilltarget}}</span>{{/skilltarget}} {{#skillrange}}<span class="sheet-range">거리:{{skillrange}}</span>{{/skillrange}}
+				</p>
+				 {{effect}} {{#flavor}}
+				<div class="sheet-flavor">
+					 {{flavor}}
+				</div>
+				 {{/flavor}}
+			</div>
+		</div>
+	</div>
+</div>
+</rolltemplate>
