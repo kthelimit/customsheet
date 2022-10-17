@@ -7,7 +7,7 @@ tateck님의 커스텀 시트에 사용된 이미지를 그대로 사용한 것�
 <h3>코드에 관해</h3>
 대부분의 코드는 tateck님이 만드신 커스텀 시트에서 따왔습니다. 잘 모르는 분야이기 때문에 오류가 나도 대응하기 어렵습니다.<br><br>
 
-2021.6.16 K (<a herf="https://twitter.com/kra_trpg">@kra_trpg</a>)<br><br>
+2021.6.16 K ([@kra_trpg](https://twitter.com/kra_trpg))<br><br>
 
 
 <h3>시트 사용방법</h3>
